@@ -1,10 +1,31 @@
 body {
   font-family: sans-serif;
   background: lightgray;
+  counter-reset: page;
+}
+
+h1 {
+  font-size: 30pt;
 }
 
 h2 {
-  break-before: page;
+  break-after: page;
+}
+
+img { 
+  width:100%;
+}
+
+.face {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1rem;
+}
+
+.two-col {
+  column-count: 2;
+  column-gap: 2em;
+  color: red;
 }
 
 @media print {
@@ -14,15 +35,33 @@ h2 {
 }
 
 @page {
+    size: 5in 8in;
+    margin-top: 0.25in;
+    margin-bottom: 0.5in;
+  }
+
+@page {
   size: 5in 8in;
   margin-top: 0.25in;
   margin-bottom: 0.5in;
 }
-@page:left {
-  margin-left: 0.25in;
-  margin-right: 1in;
-}
-@page:right {
-  margin-left: 1in;
-  margin-right: 0.25in;
+  @page:left {
+    margin-left: 0.25in;
+    margin-right: 1in;
+    @bottom-left {
+      content: counter(page);
+    }
+    @bottom-right {
+      content:"What is document?";
+    }
+  }
+  @page:right {
+    margin-left: 1in;
+    margin-right: 0.25in;
+    @bottom-left {
+      content:"E Roon Kang";
+    }
+    @bottom-right {
+      content: counter(page);
+    }
 }
