@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  background: lightgray;
+  counter-reset: page;
+}
+
+h1 {
+  break-before: right;
+  font-size: 30pt;
+}
+
+h2 {
+  break-before: right;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+img { 
+  width:100%;
+}
+
+.face {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1rem;
+}
+
+.two-col {
+  column-count: 2;
+  column-gap: 2em;
+  color: red;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+}
+
+@page {
+  size: 5in 8in;
+  margin-top: 0.25in;
+  margin-bottom: 0.5in;
+}
+  @page:left {
+    margin-left: 0.25in;
+    margin-right: 0.5in;
+    @bottom-left {
+      content: counter(page);
+      font-size: 9pt;
+    }
+    @bottom-right {
+      content:"Seeing Climate Change";
+      font-size: 9pt;
+    }
+  }
+  @page:right {
+    margin-left: 0.5in;
+    margin-right: 0.25in;
+    @bottom-left {
+      content:"Kaleigh Rusgrove & Michelle Catanzaro";
+      font-size: 9pt;
+    }
+    @bottom-right {
+      content: counter(page);
+      font-size: 9pt;
+    }
+}

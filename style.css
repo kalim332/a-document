@@ -1,34 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+Mono:wght@300&display=swap');
+
 body {
   font-family: sans-serif;
-  background: lightgray;
+  background: rgb(255, 255, 255);
   counter-reset: page;
+  font-family: 'Inter';
+  font-size: 12pt;
 }
 
-h1 {
-  break-before: right;
-  font-size: 30pt;
+p {
+  font-size: 9pt;
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+  line-height: 1.3em;
 }
 
 h2 {
   break-before: right;
-  font-size: 15pt;
+  font-size: 9pt;
   font-weight: bold;
+  padding-bottom: 1em;
+  margin-top: .25in;
+}
+
+h3 {
+  font-size: 6.5pt;
+  line-height: 1.2em;
+  padding-top: .5em;
+}
+
+h4 {
+  font-size: 6.5pt;
+  line-height: 1.2em;
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+}
+
+h5 {
+  font-size: 9pt;
+  font-weight: bold;
+  padding-bottom: 1em;
+  margin-top: .25in;
 }
 
 img { 
   width:100%;
+  margin-top: .25in;
 }
 
-.face {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 1rem;
+.full-width {
+  width: 111.5%;
+  margin: 0in -.25in -.25in -.25in;
 }
 
-.two-col {
-  column-count: 2;
-  column-gap: 2em;
-  color: red;
+.full-width2 {
+  width: 111.5%;
+  margin: 0in -.25in -.25in -.25in;
 }
 
 @media print {
@@ -39,26 +66,26 @@ gap: 1rem;
 
 @page {
   size: 5in 8in;
-  margin-top: 0.25in;
-  margin-bottom: 0.5in;
+  margin-top: 0in;
+  margin-left: 0.25in;
+  margin-right: 0.25in;
 }
   @page:left {
-    margin-left: 0.25in;
-    margin-right: 0.5in;
+    margin-bottom: 0in;
+    }
+  @page:right {
+    margin-bottom: 0.5in;
     @bottom-left {
+      content:"Kaleigh Rusgrove & Michelle Catanzaro";
+      font-size: 6.5pt;
+    }
+    @bottom-center {
       content: counter(page);
+      font-size: 6.5pt;
+      max-width: 2em;
     }
     @bottom-right {
       content:"Seeing Climate Change";
+      font-size: 6.5pt;
     }
   }
-  @page:right {
-    margin-left: 0.5in;
-    margin-right: 0.25in;
-    @bottom-left {
-      content:"Kaleigh Rusgrove & Michelle Catanzaro";
-    }
-    @bottom-right {
-      content: counter(page);
-    }
-}
