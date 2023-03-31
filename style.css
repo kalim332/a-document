@@ -20,6 +20,7 @@ h2 {
   font-size: 9pt;
   font-weight: bold;
   padding-bottom: 1em;
+  text-align: center;
 }
 
 h3 {
@@ -39,6 +40,59 @@ h5 {
   font-size: 9pt;
   font-weight: bold;
   padding-bottom: 1em;
+}
+
+h6 {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6.5pt;
+  text-align: center;
+  color: white;
+}
+
+h7 {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+h8 {
+  position: absolute;
+  top: 24.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6.5pt;
+  line-height: 1.2em;
+  width: 80%;
+  text-align: left;
+}
+
+/* h9 {
+  position: absolute;
+  top: 76.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9pt;
+  font-weight: bold;
+  color: white;
+} */
+
+h10 {
+  position: absolute;
+  /* top: 85.5%; */
+  top: 83.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6.5pt;
+  line-height: 1.2em;
+  width: 80%;
+  text-align: left;
+  color: white;
 }
 
 img { 
@@ -68,7 +122,6 @@ img {
 .full {
   position: flex;
   z-index: 1;
-  cursor: url("cursor.png"), auto;
  }
 
 .fullbottom {
@@ -167,6 +220,12 @@ img {
     margin-bottom: 0in;
   }
   @page:nth(15) {
+    margin-top: 0in;
+    margin-left: 0in;
+    margin-right: 0in;
+    margin-bottom: 0in;
+  }
+  @page:nth(16) {
     margin-top: 0in;
     margin-left: 0in;
     margin-right: 0in;
