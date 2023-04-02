@@ -106,18 +106,19 @@ img {
 .half {
   position: flex;
   z-index: 1;
-  cursor: url("cursor.png"), auto;
+  /* cursor: url("cursor.png"), auto; */
  }
 
 .halftop{
   position: absolute;
   z-index: 3;
-  cursor: url("cursor.png"), auto;
+  /* cursor: url("cursor.png"), auto; */
+  /* opacity: 0%; */
 }
-.halftop:hover {
+/* .halftop:hover {
   transition: opacity 1s ease-out;
   opacity: 0%;
-}
+} */
 
 .full {
   position: flex;
@@ -128,23 +129,24 @@ img {
   position: absolute;
   bottom: 0em;
   z-index: 3;
-  cursor: url("cursor.png"), auto;
+  /* cursor: url("cursor.png"), auto; */
+  /* opacity: 0%; */
 }
-.fullbottom:hover {
+/* .fullbottom:hover {
   transition: opacity 1s ease-out;
   opacity: 0%;
-}
+} */
 
 .fulltop {
   position: absolute;
   top: 0em;
   z-index: 3;
-  cursor: url("cursor.png"), auto;
+  /* cursor: url("cursor.png"), auto; */
 }
-.fulltop:hover {
+/* .fulltop:hover {
   transition: opacity 1s ease-out;
   opacity: 0%;
-}
+} */
 
 @media print {
   body {
@@ -158,6 +160,8 @@ img {
   margin-left: 0.25in;
   margin-right: 0.25in;
   margin-bottom: 0.5in;
+  /* bleed: 0.25in;
+  marks: crop; */
 }
 
   @page:left {
